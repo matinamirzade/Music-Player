@@ -1,0 +1,101 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: black;
+    gap: 15px;
+}
+
+#music-name{
+    text-align: center;
+    color: azure;
+    font-family: cursive;
+    margin-top: 1.4rem;
+    margin: .5rem;
+}
+
+#btns{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+i{
+    margin-right: 2rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    font-size: 4rem;
+    cursor: pointer;
+    color: azure;
+}
+
+#music-cover-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 8rem;
+}
+
+#music-time{
+    width: 400px;
+    appearance: none;
+    height: 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: auto;
+}
+
+#music-time::-webkit-slider-thumb{
+        cursor: pointer;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50px;
+        background-color: rgb(194, 194, 194);
+}
+
+#music-time-container{
+    display: flex;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0px 0px 10px 5px #b3dee5;
+    }to{
+        box-shadow: 0px 0px 38px 10px #b3dee5;
+    }
+}
+
+#music-cover{
+    width: 350px;
+    height: 350px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+#music-cover.playing{
+        animation: glow .5s ease-in-out infinite alternate,
+                   rotate 10s linear infinite;
+}
+
+#music-singer{
+    text-align: center;
+    color: azure;
+    font-family: cursive;
+}
+
+@keyframes rotate {
+    from{
+        rotate: 0deg;
+    }to{
+        rotate: 360deg;
+    }
+}
